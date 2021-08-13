@@ -1,0 +1,17 @@
+{
+  "name": "@hyrious/shellwords",
+  "description": "Ruby's stdlib shellwords porting to JS.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "src/index.ts",
+  "repository": "hyrious/shellwords",
+  "author": "hyrious <hyrious@outlook.com>",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^16.6.1"
+  },
+  "engines": {
+    "node": ">=12.2.0"
+  }
+}
