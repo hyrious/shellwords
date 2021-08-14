@@ -11,6 +11,10 @@
     },
     "default": "./dist/index.mjs"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "types": "src/index.ts",
   "repository": "hyrious/shellwords",
   "author": "hyrious <hyrious@outlook.com>",
