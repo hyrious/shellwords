@@ -1,5 +1,6 @@
 {
   "name": "@hyrious/shellwords",
+  "version": "0.1.0",
   "description": "Ruby's stdlib shellwords porting to JS.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
