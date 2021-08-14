@@ -3,13 +3,25 @@
   "description": "Ruby's stdlib shellwords porting to JS.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "exports": {
+    "node": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "default": "./dist/index.mjs"
+  },
   "types": "src/index.ts",
   "repository": "hyrious/shellwords",
   "author": "hyrious <hyrious@outlook.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:esm": "esbuild src/index.ts --target=node12.2 --minify-syntax --sourcemap --sources-content=false --outfile=dist/index.mjs",
+    "build:cjs": "esbuild src/wrapper.js --target=node12.2 --minify-syntax --sourcemap --sources-content=false --bundle --platform=node --outfile=dist/index.js",
+    "build": "npm run build:esm && npm run build:cjs"
+  },
   "devDependencies": {
-    "@types/node": "^16.6.1"
+    "@types/node": "^16.6.1",
+    "esbuild": "^0.12.20"
   },
   "engines": {
     "node": ">=12.2.0"
